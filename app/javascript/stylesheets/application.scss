@@ -1,2 +1,9 @@
 @use '~bootstrap/scss/bootstrap';
 @use '~@fortawesome/fontawesome-free/scss/fontawesome';
+
+.like-btn{
+  color:#e54747 !important;
+}
+.unlike-btn{
+  color:#528fff !important;
+}

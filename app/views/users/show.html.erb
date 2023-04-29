@@ -8,12 +8,13 @@
 
    <div class="col-md-8 offset-md-1" >
     <h1>Books</h1>
-     <table>
+     <table class="table">
       <thead>
        <tr>
         <th calspan="1"></th>
         <th>Title</th>
         <th>Opinion</th>
+        <th colspan="2"></th>
        </tr>
       </thead>
       <tbody>
@@ -32,6 +33,15 @@
          <td>
            <%= book.body %>
          </td>
+         
+       <td>
+        <%= render 'books/favorite', book: book %>
+      
+       </td>
+        <td>
+          コメント数：<%= book.book_comments.count %>
+        </td>
+         
          </tr>
        <% end %>
       </tbody>

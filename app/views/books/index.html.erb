@@ -8,23 +8,24 @@
 <% end %>
 
 <div class="container">
-  
+
  <div class="row">
-   
+
   <div class="col-md-3">
    <%= render 'users/userinfo', user: @user %>
    <%= render 'form', book: @book %>
   </div>
-  
-  
+
+
   <div class="col-md-8 offset-md-1">
     <h1>Books</h1>
-    <table>
+    <table class="table">
       <thead>
         <tr>
           <th colspan="1"></th>
           <th>Title</th>
           <th>Opinion</th>
+          <th colspan="2"></th>
         </tr>
       </thead>
      <tbody>
@@ -41,12 +42,21 @@
           <% end %>
         </td>
         <td><%= book.body %></td>
+
+      <td>
+        <%= render 'favorite', book: book %>
+       </td>
+       
+        <td>
+          コメント数：<%= book.book_comments.count %>
+        </td>
+
       </tr>
     <% end %>
      </tbody>
     </table>
   </div>
-  
- </div>  
-</div>  
+
+ </div>
+</div>
 
